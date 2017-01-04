@@ -12,7 +12,7 @@ let status={
 };
 
 function main() {
-	gl=assert(getWebGLContext(canvas, !false), 'Failed to get the rendering context for WebGL');
+	gl=assert(getWebGLContext(canvas, false), 'Failed to get the rendering context for WebGL');
 
 	let objProgram=assert(createProgram(gl, OBJECT_VSHADER_SRC, OBJECT_FSHADER_SRC), 'Failed to intialize shaders.');
 	objProgram.a_Position = gl.getAttribLocation(objProgram, 'a_Position');
@@ -323,7 +323,6 @@ function mouseMoveHandler(ev) {
 		if (status.rotX<-360 || status.rotX>360) status.rotX%=360;
 		if (status.rotY<-85) status.rotY=-85;
 		if (status.rotY>85) status.rotY=85;
-		console.log(status.rotX+' '+status.rotY);
 	}
 }
 
