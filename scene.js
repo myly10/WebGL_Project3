@@ -80,7 +80,7 @@ var boxRes = {
 }
 
 //相机的初始参数信息，相机宽高比和canvas宽高比相同
-CameraPara = {
+let CameraPara = {
 	fov:30.0,
 	near:0.1,
 	far:300,
@@ -96,7 +96,7 @@ var MOVE_VELOCITY = 30;//0.01;
 var ROT_VELOCITY = 60.0;
 
 //复杂模型的列表
-ObjectList = [
+let ObjectList = [
 	//第一个模型信息，具体内容含义相同
 	{
 		//模型文件路径
